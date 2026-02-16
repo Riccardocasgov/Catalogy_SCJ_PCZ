@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Catálogo de Productos</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="hero">
+      <h1>Catálogo de Productos</h1>
+      <p>Catálogo de Productos de SC Johnson en PCZ.</p>
+    </header>
+
+    <main class="container">
+      <section class="controls" aria-label="Filtros del catálogo">
+        <label>
+          Buscar
+          <input id="search" type="search" placeholder="Ej. audífonos" />
+        </label>
+
+        <label>
+          Categoría
+          <select id="category">
+            <option value="all">Todas</option>
+          </select>
+        </label>
+
+        <label>
+          Precio máximo
+          <input id="maxPrice" type="range" min="50" max="2500" value="2500" step="50" />
+          <span id="priceValue">$2500</span>
+        </label>
+      </section>
+
+      <section>
+        <h2>Productos</h2>
+        <div id="productGrid" class="grid" aria-live="polite"></div>
+        <p id="emptyState" class="empty hidden">No hay productos que coincidan con tu búsqueda.</p>
+      </section>
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
